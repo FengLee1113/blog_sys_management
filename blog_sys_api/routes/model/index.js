@@ -4,5 +4,5 @@ module.exports = {
   'list': { method: methods.post },
   'add': { method: methods.post },
   // 'update': { method: methods.post },
-  // 'del': { method: methods.post },
+  'del': { method: methods.post },
 }
