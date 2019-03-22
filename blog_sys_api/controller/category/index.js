@@ -13,6 +13,13 @@ const add = (val) => {
   return query( _sql, [ first_level, second_level, belong_type, TYPES.NORMAL,STATUS.NORMAL] )
 }
 
+const list = (val) => {
+  const {belong_type} = val;
+  const _sql = `select id, first_level, second_level, create_person, create_time from tb_category where belong_type = ? order by create_time DESC;`
+  return query(_sql, [belong_type, TYPES.NORMAL,STATUS.NORMAL])
+}
+
 module.exports = {
-  add
+  add,
+  list
 }

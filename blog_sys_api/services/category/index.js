@@ -1,8 +1,8 @@
 const model = require('../model')
 const m  = model([
-  'add'
+  'add',
+  'list'
 ], 'category')
-
 module.exports = {
   ...m
 }
